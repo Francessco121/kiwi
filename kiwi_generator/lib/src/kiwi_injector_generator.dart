@@ -15,7 +15,7 @@ import 'package:kiwi/kiwi.dart';
 const TypeChecker _registerTypeChecker = TypeChecker.fromRuntime(Register);
 
 bool _isRegisterMethod(MethodElement method) =>
-    method.returnType.isVoid &&
+    method.returnType is VoidType &&
     _registerTypeChecker.hasAnnotationOfExact(method);
 
 class KiwiInjectorGenerator extends Generator {
